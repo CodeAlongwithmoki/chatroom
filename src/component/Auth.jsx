@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { auth, provider } from "../firebase-config";
 import { signInWithPopup } from "firebase/auth";
 import Chat from "./Chat";
-import "./auth.css";
 
 const Auth = () => {
   const [info, setInfo] = useState(null);
