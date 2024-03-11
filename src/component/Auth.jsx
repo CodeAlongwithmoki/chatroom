@@ -21,8 +21,14 @@ const Auth = () => {
       {info ? (
         <Chat info={info} />
       ) : (
-        <div>
-          <button onClick={signInWithPopupAsync}>Sign In</button>
+        <div className="text-3xl h-screen  text-[#fff] bg-[#1e1e1e]  flex flex-col  items-center justify-center">
+          <h1 className="pb-80 text-5xl">MokiChat</h1>
+          <button
+            className="  rounded-lg bg-[#713DC5] w-40 h-14"
+            onClick={signInWithPopupAsync}
+          >
+            Sign In
+          </button>
         </div>
       )}
     </>

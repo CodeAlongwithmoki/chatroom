@@ -43,24 +43,28 @@ const Chat = ({ info }) => {
   };
 
   return (
-    <div>
-      <div>
+    <div className=" overflow-x-auto relative  h-screen bg-[#1e1e1e] text-[#fff]">
+      <div className="pb-20">
         {data.map((message) => (
-          <div key={message.id}>
-            <img src={message.photoURL} alt="" />
-            <div>
+          <div className="  flex  flex-row items-center" key={message.id}>
+            <img className="rounded-full h-12 " src={message.photoURL} alt="" />
+            <div className="pl-2">
               <strong>{message.name}</strong>: {message.text}
             </div>
           </div>
         ))}
       </div>
-      <form onSubmit={formHanlder}>
+      <form
+        className=" fixed bottom-0 flex items-center row-col"
+        onSubmit={formHanlder}
+      >
         <input
+          className="h-12"
           type="text"
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
-        <button>Enter</button>
+        <button className="  bg-[#452956] h-12 w-[8rem]">Enter</button>
       </form>
     </div>
   );
